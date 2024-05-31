@@ -27,14 +27,21 @@ It includes a simple folder structure and a conda environment for isolated depen
 
 ------------------------------------------------------------------------------
 
-## Project Title
+## Project Title 
+Stock Price Trend Forecasting With Stats/ML algos 
 =========================
 
 ### Executive Summary
 
-... Define the problem
-... What is the data science opportunity
+... Define the problem: 
+How to reliablly predict the next day trend of stock price based on the information available?
+
+... What is the data science opportunity: 
+Machine learning and strong Stats models enable us to study the problem from many angles and generate powerful algos. 
+
 ... Key takeaways
+forcasting, machine learning, time series analysis, classification algos
+
 
 ### Demo
 
@@ -92,7 +99,7 @@ It includes a simple folder structure and a conda environment for isolated depen
 
 #### Dataset
 
-... Google Drive links to datasets and pickeled models
+... AAPL stock data from yfinance api from 1980 to 2024. 
 
 ### Credits & References
 
