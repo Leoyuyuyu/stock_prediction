@@ -1,29 +1,4 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15133405&assignment_repo_type=AssignmentRepo)
-# Usage
-
-This is a template repository for quickly setting up a data science project
-It includes a simple folder structure and a conda environment for isolated dependency management.
-
-1. Start a new repo using this template
-2. Update your `LICENSE` file.
-3. Update your `README.md` file. 
-4. Set up and activate conda environment
-    1. Rename your conda environment in the `./conda.yml` file.
-    2. Add/change any dependencies and their versions in the `./conda.yml` file.
-    3. Set up your conda environment and activate it by running:
-        ```bash
-        conda env create -f conda.yml
-        conda activate <your-env-name>
-        ```
-5. Add your own scripts in `./src/`
-6. Add your own notebooks in `./notebooks/`
-7. Add your own data in `./data/`
-    gitignore will ignore the data folder when you push to github
-    save a copy of your raw and process data, 
-    pickled models in a Google Drive folder
-    and add the link in the gdrive-links.md file
-8. Add your project documents, reports, presentation pdfs in the `./docs`
-9. Add your references (tutorials, papers, books etc.) in `./references` 
 
 ------------------------------------------------------------------------------
 
@@ -31,35 +6,59 @@ It includes a simple folder structure and a conda environment for isolated depen
 Stock Price Trend Forecasting With Stats/ML algos 
 =========================
 
-### Executive Summary
+## Project overview 
 
-... Define the problem: 
-How to reliablly predict the next day trend of stock price based on the information available?
-
-... What is the data science opportunity: 
-Machine learning and strong Stats models enable us to study the problem from many angles and generate powerful algos. 
-
-... Key takeaways
-forcasting, machine learning, time series analysis, classification algos
+The objective of this project is to reliably predict stock price returns using historical time series data available online. This involves employing a combination of statistical methods and machine learning regression models to achieve accurate predictions.
 
 
-### Demo
+## Methodology
+### 1. Data Collection and Preprocessing
+Sources: Fetch historical stock price data from APIs such as Yahoo Finance.
+Time Frame: Collect data spanning multiple years to capture various market conditions and the data granularity is daily.
 
-... Show your work:
-...     Data visualisations
-...     Interactive demo (e.g., stremlit app)
-...     Short video of users trying out the solution
+### 2. Feature Engineering(optional):
+Create new features such as moving averages, volatility indices, and other technical indicators.
+Lagged features to incorporate past values into the prediction model for SIRIMAX.
+
+### 3.Exploratory Data Analysis (EDA)
+Visualization:
+Plot stock price trends over time and check the decomposition result.
+Visualize moving averages, trading volumes, and other indicators.
+
+Statistical Analysis:
+Perform descriptive statistics to summarize data characteristics.
+Analyze distributions, seasonality, and autocorrelation of stock prices.
+
+Correlation Analysis:
+Heatmaps to identify correlations between different features.
+
+#### 3. Modeling
+
+Statistical Models:
+ARIMA (AutoRegressive Integrated Moving Average): Model for univariate time series data predicting future points.
+SARIMA (Seasonal ARIMA): Extension of ARIMA for handling seasonality in data.
+
+Machine Learning Models:
+XGBoost: Ensemble learning method to predict the next day return.
+
+Hybrid Models:
+Combine outputs of statistical and machine learning models to improve prediction accuracy.
 
 
-### Methodology
 
-... High-level diagrams of entire process:
-...     various data processing steps
-...     various modelling directions
-...     various prototyping directions
+#### 4. Model Evaluation and Selection
 
 
-### Organization
+Performance Metrics:
+Mean Absolute Error (MAE): Average magnitude of errors.
+Mean Squared Error (MSE): Average squared errors to penalize larger errors.
+R-squared: Proportion of variance explained by the model.
+
+Model Selection:
+Compare models based on evaluation metrics.
+Select the best-performing model or ensemble of models for deployment.
+
+
 
 #### Repository 
 
