@@ -36,13 +36,14 @@ Heatmaps to identify correlations between different features.
 
 Statistical Models:
 ARIMA (AutoRegressive Integrated Moving Average): Model for univariate time series data predicting future points.
-SARIMA (Seasonal ARIMA): Extension of ARIMA for handling seasonality in data.
+SARIMA (Seasonal ARIMA): Extension of ARIMA for handling seasonality in data. Potential Exogerous terms: Volume, index 
+Prophet 
 
 Machine Learning Models:
 XGBoost: Ensemble learning method to predict the next day return.
 
-Hybrid Models:
-Combine outputs of statistical and machine learning models to improve prediction accuracy.
+NN models: 
+LSTM.
 
 
 
@@ -98,7 +99,22 @@ Select the best-performing model or ensemble of models for deployment.
 
 #### Dataset
 
-... AAPL stock data from yfinance api from 1980 to 2024. 
+AAPL stock data from yfinance api from 1980 to 2024. 
+
+Data introduction:
+
+Open 
+High 
+Low
+Close
+Adj Close 
+Volume 
+
+Added feature:
+1-day return 
+5-day return 
+1-Month return 
+
 
 ### Credits & References
 
