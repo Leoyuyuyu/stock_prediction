@@ -61,42 +61,6 @@ Select the best-performing model or ensemble of models for deployment.
 
 
 
-#### Repository 
-
-* `data` 
-    - contains link to copy of the dataset (stored in a publicly accessible Google Drive folder)
-    - saved copy of aggregated / processed data as long as those are not too large (> 10 MB)
-
-* `model`
-    - joblib dump of final model / model object
-
-* `notebooks`
-    - contains all final notebooks involved in the project
-
-* `docs`
-    - contains final report which summarises the project
-
-* `references`
-    - contains papers / tutorials used in the project
-
-* `src`
-    - Contains the project source code (refactored from the notebooks)
-
-* `.gitignore`
-    - Part of Git, includes files and folders to be ignored by Git version control
-
-* `conda.yml`
-    - Conda environment specification
-
-* `Makefile`
-    - Automation script for the project
-
-* `README.md`
-    - Project landing page (this page)
-
-* `LICENSE`
-    - Project license
-
 #### Dataset
 
 AAPL stock data from yfinance api from 1980 to 2024. 
@@ -114,6 +78,7 @@ Added feature:
 1-day return 
 5-day return 
 1-Month return 
+Trading volume change (weekly)
 
 
 ### Credits & References
