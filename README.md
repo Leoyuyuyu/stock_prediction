@@ -3,12 +3,12 @@
 ------------------------------------------------------------------------------
 
 ## Project Title 
-Stock Price Trend Forecasting With Stats/ML algos 
+Stock Price Trend Forecasting With Stats/ML algos and the related trading stragety
 =========================
 
 ## Project overview 
 
-The objective of this project is to reliably predict stock price returns using historical time series data available online. This involves employing a combination of statistical methods and machine learning regression models to achieve accurate predictions.
+The objective of this project is to reliably predict stock price returns using historical time series data available online. This involves employing a combination of statistical methods and machine learning regression models to achieve accurate predictions. The predicted result will be utilized to generate the trading signal and test the performance in the real situation.
 
 
 ## Methodology
@@ -16,9 +16,10 @@ The objective of this project is to reliably predict stock price returns using h
 Sources: Fetch historical stock price data from APIs such as Yahoo Finance.
 Time Frame: Collect data spanning multiple years to capture various market conditions and the data granularity is daily.
 
-### 2. Feature Engineering(optional):
+### 2. Feature Engineering:
 Create new features such as moving averages, volatility indices, and other technical indicators.
 Lagged features to incorporate past values into the prediction model for SIRIMAX.
+Generate the return in different time scale: Daily return, Weekly return and Monthly return.
 
 ### 3.Exploratory Data Analysis (EDA)
 Visualization:
@@ -29,21 +30,18 @@ Statistical Analysis:
 Perform descriptive statistics to summarize data characteristics.
 Analyze distributions, seasonality, and autocorrelation of stock prices.
 
-Correlation Analysis:
-Heatmaps to identify correlations between different features.
 
 #### 3. Modeling
 
 Statistical Models:
 ARIMA (AutoRegressive Integrated Moving Average): Model for univariate time series data predicting future points.
-SARIMA (Seasonal ARIMA): Extension of ARIMA for handling seasonality in data. Potential Exogerous terms: Volume, index 
-Prophet 
+SARIMA (Seasonal ARIMA): Extension of ARIMA for handling seasonality in data. Potential Exogerous terms: Volume change.
 
 Machine Learning Models:
 XGBoost: Ensemble learning method to predict the next day return.
 
-NN models: 
-LSTM.
+The more detailed 
+![alt text](image.png)
 
 
 
