@@ -8,7 +8,10 @@ Stock Price Trend Forecasting With Stats/ML algos and the related trading strage
 
 ## Project overview 
 
-The objective of this project is to reliably predict stock price returns using historical time series data available online. This involves employing a combination of statistical methods and machine learning regression models to achieve accurate predictions. The predicted result will be utilized to generate the trading signal and test the performance in the real situation.
+The objective of this project is to reliably predict stock price returns using historical time series data available online. This involves employing a combination of statistical methods and machine learning regression models to achieve accurate predictions. The predicted result will be utilized to generate the trading signal and test the performance in the real situation. To explain the problem in a most straightforward way: By running the system with all the data available today, we predicted that five days later the stock price will increase. Since we trust the model and we decided to buy several shares. According to the model, it is highly possible that if we sell the stock that we bought today, we will make money. 
+
+By deploying our backtesting system in the end of Notebook6, we will be able to see if we keep investing with this system, how will the capital change. 
+![alt text](image.png)
 
 
 ## Methodology
@@ -40,18 +43,21 @@ SARIMA (Seasonal ARIMA): Extension of ARIMA for handling seasonality in data. Po
 Machine Learning Models:
 XGBoost: Ensemble learning method to predict the next day return.
 
-The more detailed 
-![alt text](image.png)
+The more detailed working flow in modelling will be viewed below: 
+![alt text](image-1.png)
 
+In the figure, we can see that we utilized a novel prediction method. Firstlty, we used a continuous trainning method to keep our models updated. Secondly, we used a fitting window with fixed length. The performance of this new method is compared with the traditional method: fitting on all the available time range and the results are shown in the Notebook6. 
 
+The predicted result is then fed to the binary transformer. We can thus use the classification style metrics to evaluate the models. 
+![alt text](image-2.png)
 
 #### 4. Model Evaluation and Selection
 
 
 Performance Metrics:
-Mean Absolute Error (MAE): Average magnitude of errors.
-Mean Squared Error (MSE): Average squared errors to penalize larger errors.
-R-squared: Proportion of variance explained by the model.
+Precision: The ratio of the correctly predicted positive return days among all the predicted positive days.
+Recall: The ratio of the 
+
 
 Model Selection:
 Compare models based on evaluation metrics.
@@ -77,10 +83,5 @@ Added feature:
 5-day return 
 1-Month return 
 Trading volume change (weekly)
-
-
-### Credits & References
-
-... Include any personal learning
 
 ------------------------------------------------------------------------------
