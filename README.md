@@ -20,9 +20,9 @@ Sources: Fetch historical stock price data from APIs such as Yahoo Finance.
 Time Frame: Collect data spanning multiple years to capture various market conditions and the data granularity is daily.
 
 ### 2. Feature Engineering:
-Create new features such as moving averages, volatility indices, and other technical indicators.
-Lagged features to incorporate past values into the prediction model for SIRIMAX.
-Generate the return in different time scale: Daily return, Weekly return and Monthly return.
+Create new features such as moving averages and other technical indicators.
+Lagged features to incorporate past values into the prediction model for XGBOOST.
+Generate the return in different time scale: Daily return, Weekly return and Monthly return. I realized that it is difficult to precicely predict the return of the apple stock as it is very stoichastic. Apart from that, to connect the idea more closely to the real life situation, it is more clever to consider how to precisely pick up the large positive return. 
 
 ### 3.Exploratory Data Analysis (EDA)
 Visualization:
@@ -64,10 +64,9 @@ Compare models based on evaluation metrics.
 Select the best-performing model or ensemble of models for deployment.
 
 
+#### 5. Dataset
 
-#### Dataset
-
-AAPL stock data from yfinance api from 1980 to 2024. 
+AAPL stock data from yfinance api from 2010 to 2024. 
 
 Data introduction:
 
@@ -83,5 +82,18 @@ Added feature:
 5-day return 
 1-Month return 
 Trading volume change (weekly)
+
+#### 6. Adv and disadv
+
+Advantage:
+1. This system can potentially be deployed on different stocks and different time scale. This is because the countinuous trainning process get rid of the possibility of introducing large bias.
+2. This time series analysis system is very similiar to the real-life situation as we prevent the data leakage very well.
+3. Good interpretability
+4. Highly comprehensive(including the idea of regression and classification together)
+
+Disadvantage:
+1. This system will need a long time for running because every time we need to retrain the models for multiple times
+2. Potential overfitting problem
+
 
 ------------------------------------------------------------------------------
